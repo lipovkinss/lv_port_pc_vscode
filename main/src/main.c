@@ -70,7 +70,7 @@ extern void freertos_main(void);
  *   GLOBAL FUNCTIONS
  **********************/
 
-int main(int argc, char **argv)
+int SDL_main(int argc, char **argv)
 {
   (void)argc; /*Unused*/
   (void)argv; /*Unused*/
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
   lv_init();
 
   /*Initialize the HAL (display, input devices, tick) for LVGL*/
-  hal_init(320, 480);
+  hal_init(320, 240);
 
   #if LV_USE_OS == LV_OS_NONE
 
